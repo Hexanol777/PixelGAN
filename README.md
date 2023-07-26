@@ -50,6 +50,8 @@ Result 3:
 
 
 ## Model Files
+Generator and Discriminator models were trained for 100 epochs. the difference between the generated images from epoch 75 onwards became negligible, indicating convergence. So the training was stopped at this stage.
+However you can still load the pre-trained models by setting LOAD_MODEL to True in the `config.py` file. This will allow you to use the pre-trained weights and continue training the model with your own dataset or change the weights by fine-tuning the model as per your desires.
 - **Generator Model (Domain A to Domain B)**: [Link to Model](https://drive.google.com/file/d/1-2mpCLqUsk_6MATAyBVYre4FSedP3nbl/view?usp=sharing)
 - **Generator Model (Domain B to Domain A)**: [Link to Model](https://drive.google.com/file/d/1-BKtOW3XZQowwLlmzHbJM2iw5eFapnmL/view?usp=sharing)
 
