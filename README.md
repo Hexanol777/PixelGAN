@@ -1,2 +1,59 @@
-# PixelGAN
-CycleGAN for Scenery to Pixel Art Generation
+# PixelGAN - CycleGAN for pixel art generation
+
+## Overview
+
+This repository contains the implementation of CycleGAN for generating pixel art from scenery images and vice versa. CycleGAN is a type of Generative Adversarial Network (GAN) that learns to map images from one domain to another without the need for paired data.
+
+## Requirements
+
+- Python (>= 3.6)
+- PyTorch (>= 1.7)
+- TorchVision (>= 0.8)
+- Albumentations (>= 1.0)
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/Hexanol777/PixelGAN.git
+cd PixelGAN
+```
+2.Install the required packages:
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+1. Preprocess the dataset:
+- Place your scenery images in the `dataset/train/scenery` directory.
+- Place your pixel art images in the `dataset/train/pixel` directory.
+- Place validation images in `dataset/val` similarly.
+2. Train the model:
+- this can be done by running the cells inside `PixelGAN_Training.ipynb`
+
+## Datasets
+
+- **Domain A (Scenery Images)**: i used the images on Danbooru for this case
+- **Domain B (Pixel Art Images)**: [Link to Dataset]([https://www.example.com/dataset_domainB.zip](https://www.kaggle.com/datasets/artvandaley/curated-pixel-art-512x512)
+
+## Results
+
+Result 1:
+![Result1](https://github.com/Hexanol777/PixelGAN/blob/main/results/105.png)
+
+Result 2:
+![Result2](https://github.com/Hexanol777/PixelGAN/blob/main/results/356.png)
+
+Result 3:
+![Result3](https://github.com/Hexanol777/PixelGAN/blob/main/results/81.png)
+
+
+## Model Files
+- **Generator Model (Domain A to Domain B)**: [Link to Model](https://drive.google.com/file/d/1-2mpCLqUsk_6MATAyBVYre4FSedP3nbl/view?usp=sharing)
+- **Generator Model (Domain B to Domain A)**: [Link to Model](https://drive.google.com/file/d/1-BKtOW3XZQowwLlmzHbJM2iw5eFapnmL/view?usp=sharing)
+
+## Acknowledgments
+- This project was inspired by the original CycleGAN paper:
+- [CycleGAN Papers](https://arxiv.org/abs/1703.10593)
+- and this video: [Aladdin](https://www.youtube.com/watch?v=4LktBHGCNfw&t)
