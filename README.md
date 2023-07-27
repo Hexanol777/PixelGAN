@@ -35,7 +35,7 @@ pip install -r requirements.txt
 ## Datasets
 
 - **Domain A (Scenery Images)**: i used the images on Danbooru for this case
-- **Domain B (Pixel Art Images)**: [Link to Dataset]([https://www.example.com/dataset_domainB.zip](https://www.kaggle.com/datasets/artvandaley/curated-pixel-art-512x512)
+- **Domain B (Pixel Art Images)**: [Domain B](https://www.kaggle.com/datasets/artvandaley/curated-pixel-art-512x512)
 
 ## Results
 
