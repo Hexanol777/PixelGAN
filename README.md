@@ -52,11 +52,42 @@ Result 4:
 ![Result3](https://github.com/Hexanol777/PixelGAN/blob/main/results/Figure_4.png)
 
 
-## Model Files
+## Model Properties
 Generator and Discriminator models were trained for 100 epochs. the difference between the generated images from epoch 75 onwards became negligible, indicating convergence. So the training was stopped at this stage.
 However you can still load the pre-trained models by setting LOAD_MODEL to True in the `config.py` file. This will allow you to use the pre-trained weights and continue training the model with your own dataset or change the weights by fine-tuning the model as per your desires.
-- **Generator Model (Domain A to Domain B)**: [Link to Model](https://drive.google.com/file/d/1-2mpCLqUsk_6MATAyBVYre4FSedP3nbl/view?usp=sharing)
-- **Generator Model (Domain B to Domain A)**: [Link to Model](https://drive.google.com/file/d/1-BKtOW3XZQowwLlmzHbJM2iw5eFapnmL/view?usp=sharing)
+```
+Model Properties = {
+
+# The Model Consists of 2 Classes with below values for re-training/fine-tuning purposes
+
+## ResnetGenerator
+The `ResnetGenerator` class implements a ResNet-based generator for image translation tasks. It consists of ResNet blocks between downsampling and upsampling operations. Here are the key properties of the `ResnetGenerator`:
+
+- **Input Channels:** 3 (RGB images)
+- **Output Channels:** 3 (RGB images)
+- **ngf (Number of Generator Filters):** 64
+- **Normalization Layer:** Instance normalization
+- **Use Dropout:** False
+- **Number of ResNet Blocks:** 9
+- **Padding Type:** Reflective padding
+- **Final Activation:** Tanh
+
+## ResnetBlock
+The `ResnetBlock` class implements a single ResNet block, which consists of two convolutional layers with skip connections. Here are the key properties of the `ResnetBlock`:
+
+- **Input/Output Channels:** Variable (depends on the input)
+- **Padding Type:** Reflective padding
+- **Normalization Layer:** Instance normalization
+- **Use Dropout:** Variable (depends on the input)
+- **Use Bias:** Variable (depends on the input)
+}
+```
+Other thing you need to keep in mind while working with the model:
+- **Image Preprocessing:** The input images are preprocessed using normalization with mean (0.5, 0.5, 0.5) and standard deviation (0.5, 0.5, 0.5).
+- **Device:** The model is loaded onto the GPU if available; otherwise, it runs on the CPU.
+- **Model Loading:** The model weights are loaded from a saved state dictionary (`SceneToPixel.pth`).
+- **Image Size:** For some reason you may get a `torch.cuda.OutOfMemoryError` error when generating image (even though the model uses less than 4GBs of CUDA memory), to bypass that you simply resize the image to a smaller image.
+
 
 ## Acknowledgments
 - This project was inspired by the original CycleGAN paper:
