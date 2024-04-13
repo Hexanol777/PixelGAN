@@ -40,13 +40,16 @@ pip install -r requirements.txt
 ## Results
 
 Result 1:
-![Result1](https://github.com/Hexanol777/PixelGAN/blob/main/results/105.png)
+![Result1](https://github.com/Hexanol777/PixelGAN/blob/main/results/figure_1.png)
 
 Result 2:
-![Result2](https://github.com/Hexanol777/PixelGAN/blob/main/results/356.png)
+![Result2](https://github.com/Hexanol777/PixelGAN/blob/main/results/figure_2.png)
 
 Result 3:
-![Result3](https://github.com/Hexanol777/PixelGAN/blob/main/results/81.png)
+![Result3](https://github.com/Hexanol777/PixelGAN/blob/main/results/figure_3.png)
+
+Result 4:
+![Result3](https://github.com/Hexanol777/PixelGAN/blob/main/results/figure_4.png)
 
 
 ## Model Files
